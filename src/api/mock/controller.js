@@ -27,7 +27,7 @@ export const show = ({ params }, res, next) =>
     .then(success(res))
     .catch(next)
 
-export const update = ({ user, bodymen: { body }, params }, res, next) =>
+export const update = ({ user, body, params }, res, next) =>
   Mock.findById(params.id)
     .populate('createdBy')
     .then(notFound(res))
